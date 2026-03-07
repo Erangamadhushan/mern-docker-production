@@ -1,19 +1,26 @@
-import { useEffect, useState } from "react";
+import Hero from "./components/Hero";
+import Architecture from "./components/Architecture";
+import ApiTester from "./components/ApiTester";
+import SystemStatus from "./components/SystemStatus";
+import TechStack from "./components/TechStack";
+import Contact from "./components/Contact";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("/api/api/users")
-      .then(res => res.json())
-      .then(data => setMessage(data.message))
-      .catch(err => console.log(err));
-  }, []);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800">{message || "Loading..."}</h1>
-      <div className="mt-4 text-gray-600">Welcome to the MERN Docker App!</div>
+    <div className="bg-gray-50 min-h-screen">
+
+      <Hero />
+
+      <Architecture />
+
+      <ApiTester />
+
+      <SystemStatus />
+
+      <TechStack />
+
+      <Contact />
+
     </div>
   );
 }
