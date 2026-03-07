@@ -23,6 +23,11 @@ services:
     build: ./frontend
     container_name: mern_frontend
     restart: always
+    depends_on:
+      - backend
+
+    volumes:
+      - ./frontend:/app
 
   nginx:
     image: nginx:alpine
