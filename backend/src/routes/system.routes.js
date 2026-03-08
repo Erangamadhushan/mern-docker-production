@@ -15,3 +15,5 @@ router.get("/", (req, res) => {
     systemUptime: os.uptime(),
   });
 });
+
+export default router;

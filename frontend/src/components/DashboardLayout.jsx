@@ -2,6 +2,9 @@ import StatusCards from "./dashboard/StatusCards";
 import TradingChart from "./dashboard/TradingChart";
 import ResponseChart from "./dashboard/ResponseChart";
 import ContainerStatus from "./dashboard/ContainerStatus";
+import SystemResources from "./dashboard/SystemResources";
+import DockerContainers from "./dashboard/DockerContainers";
+import { Suspense } from "react";
 
 function DashboardLayout() {
     return (
@@ -19,6 +22,14 @@ function DashboardLayout() {
 
             <div className="mt-6">
                 <ContainerStatus />
+            </div>
+            <div className="mt-6">
+                <SystemResources />
+            </div>
+            <div className="mt-6">
+                <Suspense fallback={<div>Loading Docker Containers...</div>}>
+                    <DockerContainers />
+                </Suspense>
             </div>
         </div>
     );
