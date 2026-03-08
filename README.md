@@ -1,7 +1,7 @@
 # MERN Docker Production
 
 ## mini DevOps monitoring system.
-![Site](./docs/screenshots/screencapture-localhost-2026-03-08-03_41_05.png)
+![Site](./docs/screenshots/screencapture-localhost-2026-03-09-00_53_19.png)
 
 A production-ready **MERN stack application** containerized with Docker and automated using CI/CD.
 
